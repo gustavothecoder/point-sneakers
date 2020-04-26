@@ -1,0 +1,86 @@
+/* =global */
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+/*—————*/
+
+
+/* =header */
+.login-register-area,
+.login-register-line {
+    background-color: black;
+}
+
+.login-register-line {
+    margin: 0 200px;
+}
+
+.login-register-line>a,
+.login-register-line>p {
+    color: white;
+    font-size: 0.7em;
+    font-weight: bold;
+    margin-left: 10px;
+    padding: 3px 0;
+}
+
+.login-register-line>a:hover {
+    color: rgb(212, 212, 212);
+}
+
+.navbar {
+    margin: 0 180px;
+}
+
+.logo {
+    color: black;
+    font-size: 60px;
+}
+
+.logo:hover {
+    color: black;
+}
+
+.nav-link {
+    color: black;
+    font-size: 0.9em;
+    margin-left: 30px;
+}
+
+.nav-link:hover {
+    color: black;
+}
+/*—————*/
+
+
+/* =media queries */
+@media (max-width: 1400px) {
+    .login-register-line {
+        margin: 0 150px;
+    }
+
+    .navbar {
+        margin: 0 130px;
+    }
+}
+
+@media (max-width: 1300px) {
+    .login-register-line {
+        margin: 0 100px;
+    }
+
+    .navbar {
+        margin: 0 80px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .login-register-line {
+        margin: 0 50px;
+    }
+
+    .navbar {
+        margin: 0 30px;
+    }
+}
+/*—————*/
