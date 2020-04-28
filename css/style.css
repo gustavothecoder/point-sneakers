@@ -2,6 +2,10 @@
 * {
     font-family: 'Montserrat', sans-serif;
 }
+
+li {
+    list-style-type: none;
+}
 /*—————*/
 
 
@@ -29,7 +33,9 @@
 }
 
 .navbar {
+    height: 85px;
     margin: 0 180px;
+    padding: 0 16px;
 }
 
 .logo {
@@ -53,34 +59,140 @@
 /*—————*/
 
 
+/* =main */
+.nmd-banner {
+    right: 15vw;
+    position: absolute;
+    top: 254px;
+}
+
+.nmd-banner>p {
+    color: white;
+    font-size: 2.5em;
+}
+
+.nmd-banner>a {
+    color: white;
+    font-size: 1.5em;
+    text-decoration: underline;
+}
+
+.nmd-banner>a:hover {
+    color: white;
+}
+
+.sneakers-row {
+    margin: 0 200px;
+}
+
+.parallax {
+    background-image: url(/imgs/parallax/parallax-image.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 550px;
+}
+
+.custom-shoe-text-banner {
+    bottom: 355px;
+    color: white;
+    position: relative;
+}
+
+.custom-shoe-text-banner:hover {
+    color: white;
+}
+/*—————*/
+
+
+/* =footer */
+.footer {
+    bottom: 65px;
+    margin: 0 185px;
+    position: relative;
+}
+
+.footer-line {
+    border-top: 1px solid grey;
+}
+
+.customer-care-links>li>a {
+    color: rgb(70, 70, 70);
+    font-size: 0.8em;
+}
+
+.fa-facebook-square,
+.fa-instagram-square {
+    color: black;
+    height: 24px;
+}
+
+.newsletter-input {
+    background-color: rgb(243, 243, 243);
+}
+
+.newsletter-button {
+    background-color: black;
+    bottom: 43px;
+    color: white;
+    left: 234px;
+    position: relative;
+}
+
+.newsletter-button:hover {
+    color: white;
+}
+/*—————*/
+
+
 /* =media queries */
 @media (max-width: 1400px) {
-    .login-register-line {
+    .login-register-line,
+    .sneakers-row {
         margin: 0 150px;
     }
 
     .navbar {
         margin: 0 130px;
     }
+
+    .footer {
+        margin: 0 135px;
+    }
 }
 
 @media (max-width: 1300px) {
-    .login-register-line {
+    .login-register-line,
+    .sneakers-row {
         margin: 0 100px;
     }
 
     .navbar {
         margin: 0 80px;
     }
+
+    .parallax {
+        background-attachment: scroll;
+    }
+
+    .footer {
+        margin: 0 85px;
+    }
 }
 
 @media (max-width: 1200px) {
-    .login-register-line {
+    .login-register-line,
+    .sneakers-row {
         margin: 0 50px;
     }
 
     .navbar {
         margin: 0 30px;
+    }
+
+    .footer {
+        margin: 0 35px
     }
 }
 /*—————*/
