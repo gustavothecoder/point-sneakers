@@ -134,10 +134,7 @@ li {
 
 .newsletter-button {
     background-color: black;
-    bottom: 43px;
     color: white;
-    left: 234px;
-    position: relative;
 }
 
 .newsletter-button:hover {
