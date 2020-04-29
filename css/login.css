@@ -1,0 +1,49 @@
+/* =global */
+main {
+    margin-bottom: 150px;
+}
+/*—————*/
+
+
+/* =main */
+.reset-password-text {
+    font-size: 0.9em;
+}
+
+.login-input {
+    border: 1px solid black;
+    border-radius: 2px;
+}
+
+.signIn-button {
+    background-color: black;
+    border-radius: 2px;
+    color: white;
+}
+
+.signIn-button:hover {
+    color: white;
+}
+
+.return-home,
+.forgot-password {
+    color: black;
+    font-size: 0.9em;
+    text-decoration: underline;
+}
+
+.return-home:hover,
+.forgot-password:hover {
+    color: black;
+}
+
+.point {
+    bottom: 4px;
+    position: relative;
+}
+/*—————*/
+
+
+/* =media queries */
+
+/*—————*/

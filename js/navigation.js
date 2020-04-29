@@ -1,11 +1,3 @@
-const main = $('main');
-
-function ConfigureLinks() {
-    $('[link]').each((index, link) => {
-        link.href = link.attributes['link'].value;
-    });
-}
-
 function Navigate(hash) {
     if (!hash)
         return;
@@ -22,5 +14,4 @@ function InitialPage() {
     Navigate('#pages/home.html');
 }
 
-ConfigureLinks();
 InitialPage();

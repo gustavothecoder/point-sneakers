@@ -1,0 +1,70 @@
+/* =main */
+.nmd-banner {
+    right: 15vw;
+    position: absolute;
+    top: 254px;
+}
+
+.nmd-banner>p {
+    color: white;
+    font-size: 2.5em;
+}
+
+.nmd-banner>a {
+    color: white;
+    font-size: 1.5em;
+    text-decoration: underline;
+}
+
+.nmd-banner>a:hover {
+    color: white;
+}
+
+.sneakers-row {
+    margin: 0 200px;
+}
+
+.parallax {
+    background-image: url(/imgs/parallax/parallax-image.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 550px;
+}
+
+.custom-shoe-text-banner {
+    bottom: 355px;
+    color: white;
+    position: relative;
+}
+
+.custom-shoe-text-banner:hover {
+    color: white;
+}
+/*—————*/
+
+
+/* =media queries */
+@media (max-width: 1400px) {
+    .sneakers-row {
+        margin: 0 150px;
+    }
+}
+
+@media (max-width: 1300px) {
+    .sneakers-row {
+        margin: 0 100px;
+    }
+
+    .parallax {
+        background-attachment: scroll;
+    }
+}
+
+@media (max-width: 1200px) {
+    .sneakers-row {
+        margin: 0 50px;
+    }
+}
+/*—————*/
