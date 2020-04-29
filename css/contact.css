@@ -1,0 +1,22 @@
+/* =global */
+main {
+    margin-bottom: 150px;
+}
+/*—————*/
+
+
+/* =main */
+.contact-email {
+    color: black;
+    text-decoration: underline;
+}
+
+.contact-email:hover {
+    color: black;
+}
+/*—————*/
+
+
+/* =media queries */
+
+/*—————*/
