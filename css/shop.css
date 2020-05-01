@@ -1,0 +1,52 @@
+/* =global */
+main {
+    margin-bottom: 150px;
+}
+/*—————*/
+
+
+/* =main */
+.sale-area {
+    margin: 0 200px;
+}
+
+.sort-text {
+    font-size: 0.8em;
+}
+
+.sort-select {
+    border: 1px solid black;
+    border-radius: 2px;
+    width: 150px;
+}
+
+.sale-line {
+    border-top: 1px solid black;
+}
+
+.old-price {
+    color: gray;
+    text-decoration-line: line-through;
+}
+/*—————*/
+
+
+/* =media queries */
+@media (max-width: 1400px) {
+    .sale-area {
+        margin: 0 150px;
+    }
+}
+
+@media (max-width: 1300px) {
+    .sale-area {
+        margin: 0 100px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .sale-area {
+        margin: 0 50px;
+    }
+}
+/*—————*/
