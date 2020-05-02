@@ -1,0 +1,130 @@
+/* =global */
+main {
+    margin-bottom: 150px;
+}
+/*—————*/
+
+
+/* =main */
+.sneaker-page-area {
+    background-color: rgb(247, 247, 247);
+}
+
+.sneaker-page {
+    margin: 0 200px;
+}
+
+.breadcrumb {
+    background-color: rgb(247, 247, 247);
+}
+
+.breadcrumb-item,
+.breadcrumb-item>a {
+    color: black;
+    font-size: 0.9em;
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+    content: "›";
+}
+
+.carousel-control-prev {
+    left: -80px;
+}
+
+.carousel-control-next {
+    right: -80px;
+}
+
+.carousel-control-prev-icon {
+    background-image: url("//cdn.shopify.com/s/files/1/1132/3440/t/4/assets/arrow-left.svg?v=3188370183416789356");
+    height: 40px;
+    width: 40px;
+}
+
+.carousel-control-next-icon {
+    background-image: url("//cdn.shopify.com/s/files/1/1132/3440/t/4/assets/arrow-right.svg?v=3188370183416789356");
+    height: 40px;
+    width: 40px;
+}
+
+.carousel-indicators {
+    bottom: -50px;
+}
+
+.carousel-indicators li {
+    background-color: black;
+    border-radius: 50%;
+    height: 5px;
+    width: 5px;
+}
+
+.brand {
+    color: rgb(70, 70, 70);
+    font-size: 0.9em;
+}
+
+.sneaker-info-line {
+    border-top: 1px solid black;
+}
+
+.color-label,
+.size-label,
+.quantity-label {
+    font-size: 0.8em;
+}
+
+.color-select,
+.size-select {
+    background-color: rgb(247, 247, 247);
+    border: none;
+    border-bottom: 1px solid black;
+    border-radius: 0;
+}
+
+.color-select:enabled,
+.size-select:enabled {
+    background-color: rgb(247, 247, 247);
+}
+
+.color-select:focus,
+.size-select:focus {
+    box-shadow: 0px 0px 10px -1px rgba(0,0,0,0.25);
+}
+
+.quantity-input {
+    border: 1px solid black;
+}
+
+.add-to-cart {
+    border: 1px solid black;
+    border-radius: 1px;
+    font-size: 1.2em;
+}
+
+.add-to-cart:hover {
+    background-color: black;
+    color: white;
+}
+/*—————*/
+
+
+/* =media queries */
+@media (max-width: 1400px) {
+    .sneaker-page {
+        margin: 0 150px;
+    }  
+}
+
+@media (max-width: 1300px) {
+    .sneaker-page {
+        margin: 0 100px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .sneaker-page {
+        margin: 0 50px;
+    }
+}
+/*—————*/
