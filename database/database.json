@@ -1,0 +1,110 @@
+{
+  "sneakers": [
+    {
+      "id": 1,
+      "imagePath": "imgs/sneakers-for-sale/nike-sb-sj/nike-sb-sj-light-pink.jpg",
+      "brand": "NIKE SB",
+      "name": "Nike SB Stefan Janoski",
+      "color": "Light Pink",
+      "price": 119,
+      "sale": false,
+      "newPrice": 0,
+      "inStock": true
+    },
+    {
+      "id": 2,
+      "imagePath": "imgs/sneakers-for-sale/nike-epic-react/nike-epic-react-grey.jpg",
+      "brand": "NIKE",
+      "name": "Nike Epic React",
+      "color": "Gray",
+      "price": 150,
+      "sale": false,
+      "newPrice": 0,
+      "inStock": true
+    },
+    {
+      "id": 3,
+      "imagePath": "imgs/sneakers-for-sale/air-jordan-3/air-jordan-3-orange.jpg",
+      "brand": "AIR JORDAN",
+      "name": "Jordan 3",
+      "color": "Orange",
+      "price": 195,
+      "sale": false,
+      "newPrice": 0,
+      "inStock": true
+    },
+    {
+      "id": 4,
+      "imagePath": "imgs/sneakers-for-sale/converse-ck-high/converse-chuck-taylor-high.jpg",
+      "brand": "CONVERSE",
+      "name": "Chuck Taylor High",
+      "color": "Light Gray",
+      "price": 62,
+      "sale": false,
+      "newPrice": 0,
+      "inStock": true
+    },
+    {
+      "id": 5,
+      "imagePath": "imgs/sneakers-for-sale/air-jordan-1/air-jordan-1-light-blue.jpg",
+      "brand": "AIR JORDAN",
+      "name": "Jordan 1",
+      "color": "Light Blue",
+      "price": 270,
+      "sale": false,
+      "newPrice": 0,
+      "inStock": true
+    },
+    {
+      "id": 6,
+      "imagePath": "imgs/sneakers-for-sale/nike-af-270/nike-air-force-270.jpg",
+      "brand": "NIKE",
+      "name": "Air Force 270",
+      "color": "Light Gray",
+      "price": 180,
+      "sale": false,
+      "newPrice": 0,
+      "inStock": true
+    },
+    {
+      "id": 7,
+      "imagePath": "imgs/sneakers-for-sale/adidas-nmd/adidas-nmd.jpg",
+      "brand": "ADIDAS",
+      "name": "NMD_R1",
+      "colors": [
+        "Black",
+        "Light Gray"
+      ],
+      "price": 72,
+      "sale": false,
+      "newPrice": 0,
+      "inStock": true
+    },
+    {
+      "id": 8,
+      "imagePath": "imgs/sneakers-for-sale/liquidation/adidas-superstar/adidas-superstar-white.jpg",
+      "brand": "ADIDAS",
+      "name": "Superstar",
+      "colors": [
+        "White"
+      ],
+      "price": 65,
+      "sale": true,
+      "newPrice": 39,
+      "inStock": true
+    },
+    {
+      "id": 9,
+      "imagePath": "imgs/sneakers-for-sale/liquidation/nike-af1/nike-af1-black.jpg",
+      "brand": "NIKE",
+      "name": "Air Force 1",
+      "colors": [
+        "Black"
+      ],
+      "price": 102,
+      "sale": false,
+      "newPrice": 0,
+      "inStock": false
+    }
+  ]
+}

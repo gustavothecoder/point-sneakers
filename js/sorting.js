@@ -1,27 +1,10 @@
-class Sneaker {
-    constructor(imagePath, brand, name, price, sale, newPrice, inStock) {
-        this.imagePath = imagePath;
-        this.brand = brand;
-        this.name = name;
-        this.price = price;
-        this.sale = sale;
-        this.newPrice = newPrice;
-        this.inStock = inStock;
-    }
-}
+let sneakers;
+let sneakersSortedByPriceLowToHigh;
 
-const nikeSbSj = new Sneaker('imgs/sneakers-for-sale/nike-sb-sj/nike-sb-sj-light-pink.jpg', 'NIKE SB', 'Nike SB Stefan Janoski', 119, false, '', true);
-const nikeEpicReact = new Sneaker('imgs/sneakers-for-sale/nike-epic-react/nike-epic-react-grey.jpg', 'NIKE', 'Nike Epic React', 150, false, '', true);
-const airJordan3 = new Sneaker('imgs/sneakers-for-sale/air-jordan-3/air-jordan-3--orange.jpg', 'AIR JORDAN', 'Jordan 3', 195, false, '', true);
-const converseCkHigh = new Sneaker('imgs/sneakers-for-sale/converse-ck-high/converse-chuck-taylor-high.jpg', 'CONVERSE', 'Converse Chuck Taylor High', 62, false, '', true);
-const airJordan1 = new Sneaker('imgs/sneakers-for-sale/air-jordan-1/air-jordan-1-light-blue.jpg', 'AIR JORDAN', 'Jordan 1', 270, false, '', true);
-const nikeAf270 = new Sneaker('imgs/sneakers-for-sale/nike-af-270/nike-air-force-270.jpg', 'NIKE', 'Nike Air Force 270', 180, false, '', true);
-const adidasNmdR1 = new Sneaker('imgs/sneakers-for-sale/adidas-nmd/adidas-nmd.jpg', 'ADIDAS', 'Adidas NMD_R1', 72, false, '', true);
-const adidasSuperstar = new Sneaker('imgs/sneakers-for-sale/liquidation/adidas-superstar/adidas-superstar-white.jpg', 'ADIDAS', 'Adidas Superstar', 65, true, 39, true);
-const nikeAf1Black = new Sneaker('imgs/sneakers-for-sale/liquidation/nike-af1/nike-af1-black.jpg', 'NIKE', 'Nike Air Force 1', 102, false, '', false);
-const sneakersByPriceLowToHigh = [nikeSbSj, nikeEpicReact, airJordan3, converseCkHigh, airJordan1, nikeAf270, adidasNmdR1, adidasSuperstar, nikeAf1Black];
-const featuredSneakers = sneakersByPriceLowToHigh.slice();
-sneakersByPriceLowToHigh.sort(OrderByPriceLowToHigh); 
+$.getJSON("database/database.json", function(data) {
+    sneakers = data.sneakers.slice();
+    sneakersSortedByPriceLowToHigh = data.sneakers.slice().sort(OrderByPriceLowToHigh);
+}); 
 
 function OrderByPriceLowToHigh(sneakerA, sneakerB) {
     if (!sneakerA.inStock) {
@@ -41,13 +24,13 @@ function OrderByPriceLowToHigh(sneakerA, sneakerB) {
     return sneakerA - sneakerB;
 }
 
-function OrderSneakers() {
+function ShowSneakers() {
     const option = document.getElementsByClassName('sort-select')[0].selectedIndex;
     DeleteCardItems();
     if (option == 0) {
-        Show(featuredSneakers);
+        Show(sneakers);
     } else if (option == 1) {
-        Show(sneakersByPriceLowToHigh);
+        Show(sneakersSortedByPriceLowToHigh);
     }
 }
 
