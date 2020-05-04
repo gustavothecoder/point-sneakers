@@ -1,3 +1,7 @@
+window.onhashchange = function() {
+    this.Navigate(location.hash);
+}
+
 function Navigate(hash) {
     if (!hash)
         return;
