@@ -1,7 +1,7 @@
 let sneakers;
 let sneakersSortedByPriceLowToHigh;
 
-$.getJSON("database/database.json", function(data) {
+$.getJSON("database/sneakers.json", function(data) {
     sneakers = data.sneakers.slice();
     sneakersSortedByPriceLowToHigh = data.sneakers.slice().sort(OrderByPriceLowToHigh);
 }); 
