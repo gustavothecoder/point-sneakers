@@ -4,5 +4,5 @@ const adapter = new FileSync('users.json');
 const database = lowdb(adapter);
 
 database.get('users')
-    .remove({email: "Test@gmail.com"})
+    .remove({email: "test@test.com"})
     .write();

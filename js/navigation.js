@@ -15,7 +15,11 @@ function Navigate(hash) {
 }
 
 function InitialPage() {
-    Navigate('#pages/home.html');
+    if (location.hash === '#' || location.hash === '') {
+        Navigate('#pages/home.html');
+    } else {
+        Navigate(location.hash);
+    }
 }
 
 InitialPage();

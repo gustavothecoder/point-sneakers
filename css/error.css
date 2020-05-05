@@ -1,0 +1,18 @@
+/* =global */
+main {
+    margin-bottom: 500px;
+}
+/*—————*/
+
+
+/* =main */
+.error-area>a,
+.error-area>a:hover {
+    color: black;
+}
+/*—————*/
+
+
+/* =media queries */
+
+/*—————*/
