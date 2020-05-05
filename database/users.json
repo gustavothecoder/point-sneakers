@@ -1,12 +1,6 @@
 {
   "users": [
     {
-      "firstName": "test",
-      "lastName": "test",
-      "email": "test@test.com",
-      "password": "test"
-    },
-    {
       "firstName": "Gustavo",
       "lastName": "Ribeiro",
       "email": "gustavo.ribeiro@hotmail.com",

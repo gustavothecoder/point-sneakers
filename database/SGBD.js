@@ -3,6 +3,8 @@ const FileSync = require('lowdb/adapters/FileSync');
 const adapter = new FileSync('users.json');
 const database = lowdb(adapter);
 
-database.get('users')
-    .remove({email: "test@test.com"})
-    .write();
+const test = database.get('users')
+    .find({email: "gustavo.ribeiro@hotmail.com"})
+    .value();
+
+console.log(test);
