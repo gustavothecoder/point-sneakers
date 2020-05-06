@@ -59,6 +59,11 @@ main {
     width: 5px;
 }
 
+[old-price] {
+    color: gray;
+    text-decoration-line: line-through;
+}
+
 .brand {
     color: rgb(70, 70, 70);
     font-size: 0.9em;
