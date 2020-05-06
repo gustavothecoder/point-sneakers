@@ -42,7 +42,8 @@ function DeleteCardItems() {
 
 function Show(sneakers) {
     $('[sneaker-card]').each(function (index) {
-        $(`[sneaker-image="${index}"]`).append(`<img card-item class="card-img-top w-100" src="${sneakers[index].imagePath}" alt="">`);
+        $(this).prepend(`<a card-item href="#pages/sneaker-page.html" sneaker-image="${index}" onclick="GenerateTheSneakerPage(${sneakers[index].id})"></a>`);
+        $(`[sneaker-image="${index}"]`).append(`<img card-item class="card-img-top w-100" src="${sneakers[index].images[0]}" alt="">`);
         $(`[sneaker-info="${index}"]`).append(`<p card-item class="card-text text-center mb-0 font-weight-bold">${sneakers[index].brand}</p>`,
                                               `<p card-item class="card-text text-center">${sneakers[index].name}</p>`);
         if (sneakers[index].inStock) {
