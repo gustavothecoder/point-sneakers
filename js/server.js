@@ -3,7 +3,9 @@ const app = express();
 const lowdb = require('lowdb');
 const FileSync = require('lowdb/adapters/FileSync');
 const adapter = new FileSync('database/users.json');
+const adapter2 = new FileSync('database/cart.json');
 const usersDatabase = lowdb(adapter);
+const cartDatabase = lowdb(adapter2);
 
 app.use(express.static('.'));
 
@@ -21,6 +23,24 @@ app.post('/createAccount', function(req, res) {
     }
     res.end();
 });
+
+function VerifyAccountExistenceWithEmail(email) {
+    const searchResult = usersDatabase.get('users')
+        .find({email})
+        .value();
+    return searchResult;
+}
+
+function AddAccount(firstName, lastName, email, password) {
+    usersDatabase.get('users')
+        .push({
+            firstName,
+            lastName,
+            email,
+            password
+        })
+        .write()
+}
 
 app.post('/login', function(req, res) {
     const validationResult = ValidateLogin(req.body);
@@ -46,24 +66,53 @@ function ValidateLogin(data) {
     }
 }
 
-function VerifyAccountExistenceWithEmail(email) {
-    const searchResult = usersDatabase.get('users')
-        .find({email})
-        .value();
-    return searchResult;
-}
-
 function ValidatePassword(requisitionPassword, validPassword) {
     return requisitionPassword === validPassword;
 }
 
-function AddAccount(firstName, lastName, email, password) {
-    usersDatabase.get('users')
+app.post('/addToCart', function(req, res) {
+    const searchProductInCartResult = SearchProductInCart(req.body);
+    if (searchProductInCartResult) {
+        IncreaseProductQuantity(req.body.id);
+    } else {
+        AddProductInCart(req.body);
+    }
+    res.end();
+});
+
+function SearchProductInCart(product) {
+    const productFound = cartDatabase.get('products')
+        .find({id: product.id})
+        .value();
+    if (productFound === undefined) {
+        return false;
+    } else {
+        if (productFound.color === product.color) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+}
+
+function IncreaseProductQuantity(productID) {
+    let newQuantity = cartDatabase.get('products')
+        .find({productID})
+        .value();
+    newQuantity = newQuantity.quantity + 1;
+    cartDatabase.get('products')
+        .find({productID})
+        .assign({quantity: newQuantity})
+        .write();
+}
+
+function AddProductInCart(product) {
+    cartDatabase.get('products')
         .push({
-            firstName,
-            lastName,
-            email,
-            password
+            productID: product.sneakerID,
+            color: product.color,
+            size: product.size,
+            quantity: product.quantity
         })
-        .write()
+        .write();
 }

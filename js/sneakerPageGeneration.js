@@ -48,6 +48,7 @@ function GenerateSneakerInfo(sneaker) {
 }
 
 function GenerateForm(sneaker) {
+    $('[buy-form]').append(`<input name="sneakerID" type="hidden" value="${sneaker.id}">`);
     GenerateSelectColor(sneaker.colors);
     if (sneaker.sale) {
         AddCartButton(sneaker.newPrice, sneaker.inStock);
@@ -57,8 +58,8 @@ function GenerateForm(sneaker) {
 }
 
 function GenerateSelectColor(colors) {
-    colors.forEach(color => {
-        $('[sneaker-colors]').append(`<option value="${color}">${color}</option>`);
+    colors.forEach((color, index) => {
+        $('[sneaker-colors]').append(`<option value="${index}">${color}</option>`);
     });
 }
 
