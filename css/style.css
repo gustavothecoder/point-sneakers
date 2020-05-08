@@ -16,6 +16,10 @@ li {
 
 
 /* =header */
+.main-header {
+    z-index: 2;
+}
+
 .login-register-area,
 .login-register-line {
     background-color: black;
@@ -61,6 +65,79 @@ li {
 
 .nav-link:hover {
     color: black;
+}
+/*—————*/
+
+
+/* =main */
+.cart-background {
+    background-color: rgba(194, 191, 191, 0.8);
+    display: none;
+    height: 100vh;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+}
+
+.cart-area {
+    display: none;
+    top: 0;
+}
+
+.cart {
+    box-shadow: 0px 0px 50px 14px rgba(0,0,0,0.2);
+    margin-top: 50px;
+    z-index: 3;
+}
+
+.cart-title {
+    padding-left: 50px;
+}
+
+.close-button {
+    font-size: 1.6em;
+}
+
+.cart-line {
+    border-top: 1px solid black;
+}
+
+.size-color {
+    font-size: 0.9em;
+}
+
+.remove-button {
+    color: rgb(170, 170, 170);
+    font-size: 0.8em;
+}
+
+.remove-button:hover {
+    color: rgb(170, 170, 170);
+}
+
+#checkOutForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cart-special-instructions {
+    border: 1px solid black;
+    border-radius: 2px;
+}
+
+.subtotal-text {
+    font-size: 0.8em;
+}
+
+.check-out-button {
+    background-color: black;
+    border-radius: 0px;
+    color: white;
+}
+
+.check-out-button:hover {
+    color: white;
 }
 /*—————*/
 

@@ -72,38 +72,26 @@ function ValidatePassword(requisitionPassword, validPassword) {
 
 app.post('/addToCart', function(req, res) {
     const searchProductInCartResult = SearchProductInCart(req.body);
-    if (searchProductInCartResult) {
-        IncreaseProductQuantity(req.body.id);
-    } else {
+    if (!searchProductInCartResult) {
         AddProductInCart(req.body);
     }
+    res.redirect('../#pages/shop.html');
     res.end();
 });
 
 function SearchProductInCart(product) {
     const productFound = cartDatabase.get('products')
-        .find({id: product.id})
+        .find({
+            productID: product.sneakerID,
+            color: product.color,
+            size: product.size
+        })
         .value();
     if (productFound === undefined) {
         return false;
     } else {
-        if (productFound.color === product.color) {
-            return true;
-        } else {
-            return false;
-        }
+        return true;
     }
-}
-
-function IncreaseProductQuantity(productID) {
-    let newQuantity = cartDatabase.get('products')
-        .find({productID})
-        .value();
-    newQuantity = newQuantity.quantity + 1;
-    cartDatabase.get('products')
-        .find({productID})
-        .assign({quantity: newQuantity})
-        .write();
 }
 
 function AddProductInCart(product) {
@@ -113,6 +101,23 @@ function AddProductInCart(product) {
             color: product.color,
             size: product.size,
             quantity: product.quantity
+        })
+        .write();
+}
+
+app.post('/removeProduct', function(req, res) {
+    RemoveProductFromCart(req.body);
+    res.redirect('../#pages/home.html');
+    res.end();
+});
+
+function RemoveProductFromCart(product) {
+    console.log(product)
+    cartDatabase.get('products')
+        .remove({
+            productID: product.productID,
+            color: product.color,
+            size: product.size
         })
         .write();
 }

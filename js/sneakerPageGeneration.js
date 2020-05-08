@@ -8,6 +8,7 @@ $.getJSON('database/sneakers.json', function(data) {
 
 function GenerateTheSneakerPage(sneakerID) {
     setTimeout(() => {
+        location.hash = '#'; 
         const sneaker = sneakers.find(sneaker => sneaker.id === sneakerID);
         GenerateBreadcrumb(sneaker);
         GenerateSlider(sneaker);
