@@ -48,6 +48,25 @@ li {
     padding: 0 16px;
 }
 
+.navbar-toggler {
+    padding-right: 0;
+}
+
+.navbar-toggler-icon {
+    background: url(//cdn.shopify.com/s/files/1/1132/3440/t/4/assets/nav.svg?v=13525773726332029513) no-repeat left 0 center;
+}
+
+.mobile-cart {
+    display: none;
+    background: url(//cdn.shopify.com/s/files/1/1132/3440/t/4/assets/cart.svg?v=13382465955315071298) no-repeat left 0 center;
+    height: 35px;
+    width: 27px;
+}
+
+.navbar-nav {
+    background-color: white;
+}
+
 .logo {
     color: black;
     font-size: 60px;
@@ -113,6 +132,10 @@ li {
 
 .remove-button:hover {
     color: rgb(170, 170, 170);
+}
+
+.sale-info>p {
+    font-size: 1.5em;
 }
 
 #checkOutForm {
@@ -224,6 +247,29 @@ li {
 
     .footer {
         margin: 0 35px
+    }
+}
+
+@media (max-width: 991px) {
+    .navbar-brand {
+        margin: auto;
+        height: 85px;
+        padding: 0;
+    }
+
+    .navbar-collapse {
+        position: relative;
+        left: 46px;
+    }
+
+    .mobile-cart {
+        display: block;
+    }
+}
+
+@media (max-width: 480px) {
+    .sale-info>p {
+        font-size: 1.0em;
     }
 }
 /*—————*/

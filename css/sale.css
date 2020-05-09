@@ -49,4 +49,10 @@ main {
         margin: 0 50px;
     }
 }
+
+@media (max-width: 575px) {
+    .card {
+        margin: auto;
+    }
+}
 /*—————*/

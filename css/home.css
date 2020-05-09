@@ -56,15 +56,43 @@
     .sneakers-row {
         margin: 0 100px;
     }
-
-    .parallax {
-        background-attachment: scroll;
-    }
 }
 
 @media (max-width: 1200px) {
     .sneakers-row {
         margin: 0 50px;
+    }
+}
+
+@media (max-width: 767px) {
+    .nmd-banner {
+        top: 180px;
+    }
+}
+
+@media (max-width: 575px) {
+    .nmd-banner {
+        top: 150px;
+    }
+}
+
+@media (max-width: 480px) {
+    .parallax {
+        background-attachment: scroll;
+    }
+}
+
+@media (max-width: 400px) {
+    .nmd-banner {
+        top: 125px;
+    }
+
+    .nmd-banner>p {
+        font-size: 2.0em;
+    }
+
+    .nmd-banner>a {
+        font-size: 1.0em;
     }
 }
 /*—————*/

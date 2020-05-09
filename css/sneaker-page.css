@@ -72,6 +72,11 @@ main {
 
 .sneaker-info-line {
     border-top: 1px solid black;
+    width: 50%;
+}
+
+[buy-form] {
+    width: 50%;
 }
 
 .color-label,
@@ -131,6 +136,16 @@ main {
 @media (max-width: 1200px) {
     .sneaker-page {
         margin: 0 50px;
+    }
+}
+
+@media (max-width: 767px) {
+    .sneaker-info-line {
+        width: 100%;
+    }
+    
+    [buy-form] {
+        width: 100%;
     }
 }
 /*—————*/
