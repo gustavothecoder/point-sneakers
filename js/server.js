@@ -112,7 +112,6 @@ app.post('/removeProduct', function(req, res) {
 });
 
 function RemoveProductFromCart(product) {
-    console.log(product)
     cartDatabase.get('products')
         .remove({
             productID: product.productID,
